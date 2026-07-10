@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: Maundy
-Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
+Template Name: Axis
+Template URL: https://bootstrapmade.com/axis-bootstrap-corporate-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
