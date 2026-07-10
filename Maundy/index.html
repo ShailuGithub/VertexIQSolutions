@@ -428,7 +428,10 @@
                 <h3>Send us a message</h3>
               </div>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form id="contactForm" action="https://api.web3forms.com/submit" method="post" class="web3-email-form">
+
+                <input type="hidden" name="access_key" value="3c1d03f7-fb57-4696-8d7e-7a769b41752f">
+                <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
 
                 <div class="row">
                   <div class="col-md-6">
@@ -555,6 +558,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/web3forms.js"></script>
 
 </body>
 

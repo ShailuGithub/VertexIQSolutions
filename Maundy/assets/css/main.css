@@ -92,7 +92,8 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+.php-email-form .error-message,
+.web3-email-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -102,7 +103,8 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.php-email-form .sent-message,
+.web3-email-form .sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -112,7 +114,8 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .loading {
+.php-email-form .loading,
+.web3-email-form .loading {
   display: none;
   background: var(--surface-color);
   text-align: center;
@@ -120,7 +123,8 @@ h6 {
   margin-bottom: 24px;
 }
 
-.php-email-form .loading:before {
+.php-email-form .loading:before,
+.web3-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
