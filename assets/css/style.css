@@ -324,6 +324,16 @@ button { font-family: inherit; }
   scrollbar-width: none;
 }
 .tilt-carousel::-webkit-scrollbar { display: none; }
+.tilt-carousel.is-pinned { overflow: hidden; }
+#services.services-pinned {
+  min-height: 100vh;
+  padding-block: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#services.services-pinned .section-title { margin-bottom: 28px; }
+#services.services-pinned .tilt-carousel { padding-block: 20px 10px; }
 .tilt-track { display: flex; gap: 38px; width: max-content; }
 .tilt-card {
   flex: 0 0 272px;
