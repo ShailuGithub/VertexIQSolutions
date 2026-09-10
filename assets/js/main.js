@@ -1,6 +1,15 @@
 (function () {
   "use strict";
 
+  /* Theme toggle (light/dark) */
+  var themeToggle = document.getElementById("theme-toggle");
+  themeToggle && themeToggle.addEventListener("click", function () {
+    var current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+    var next = current === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("vertexiq-theme", next); } catch (e) {}
+  });
+
   /* Sticky header shadow */
   var header = document.getElementById("site-header");
   function onScroll() {
