@@ -512,29 +512,18 @@ button { font-family: inherit; }
 .scroll-top:hover { background: var(--accent-dark); }
 
 /* ==========================================================================
-   Utility stack — theme toggle (left side, clear of the Tawk.to chat
-   widget which docks bottom-right)
+   Theme toggle — sits in the header, next to the primary CTA
    ========================================================================== */
-.util-stack {
-  position: fixed;
-  left: 22px;
-  bottom: 78px;
-  z-index: 95;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
-}
 .theme-toggle {
-  width: 44px; height: 44px;
+  width: 38px; height: 38px;
   border-radius: 50%;
   background: var(--bg-soft-2);
   border: 1px solid var(--border);
   color: var(--ink);
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
+  flex-shrink: 0;
   transition: transform .15s ease, background .15s ease, border-color .15s ease;
-  box-shadow: var(--shadow-s);
 }
 .theme-toggle:hover { transform: translateY(-2px); border-color: var(--accent); }
 .theme-toggle .icon { width: 20px; height: 20px; }
