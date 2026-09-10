@@ -512,16 +512,17 @@ button { font-family: inherit; }
 .scroll-top:hover { background: var(--accent-dark); }
 
 /* ==========================================================================
-   Utility stack — theme toggle + chat button
+   Utility stack — theme toggle (left side, clear of the Tawk.to chat
+   widget which docks bottom-right)
    ========================================================================== */
 .util-stack {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  left: 22px;
+  bottom: 78px;
   z-index: 95;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 14px;
 }
 .theme-toggle {
@@ -540,34 +541,6 @@ button { font-family: inherit; }
 .theme-toggle .icon-moon { display: none; }
 [data-theme="light"] .theme-toggle .icon-sun { display: none; }
 [data-theme="light"] .theme-toggle .icon-moon { display: block; }
-
-.chat-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px 10px 10px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
-  font-size: .92rem;
-  box-shadow: var(--shadow-m);
-  transition: transform .15s ease, background .15s ease;
-}
-.chat-btn:hover { transform: translateY(-2px); background: var(--accent-dark); }
-.chat-btn .chat-icon-wrap {
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .2);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.chat-btn .icon { width: 16px; height: 16px; color: #fff; }
-
-@media (max-width: 560px) {
-  .chat-btn span { display: none; }
-  .chat-btn { padding: 10px; }
-}
 
 /* ==========================================================================
    Reveal-on-scroll
