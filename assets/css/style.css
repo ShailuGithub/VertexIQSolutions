@@ -119,8 +119,8 @@ button { font-family: inherit; }
 }
 .site-header.is-scrolled { border-color: var(--border); box-shadow: var(--shadow-s); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; color: var(--ink); }
-.brand img { height: 34px; width: auto; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; color: var(--ink); white-space: nowrap; }
+.brand img { height: 34px; width: auto; flex-shrink: 0; }
 .nav-links { display: flex; align-items: center; gap: 34px; }
 .nav-links a {
   position: relative;
@@ -154,6 +154,12 @@ button { font-family: inherit; }
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-toggle { display: inline-flex; }
+  .nav-right .btn-primary { display: none; }
+}
+
+@media (max-width: 420px) {
+  .brand { font-size: .92rem; gap: 8px; }
+  .brand img { height: 28px; }
 }
 
 .nav-mobile {
