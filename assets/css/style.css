@@ -413,6 +413,29 @@ button { font-family: inherit; }
 }
 
 /* ==========================================================================
+   Portfolio
+   ========================================================================== */
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.portfolio-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 28px; border-radius: var(--radius-l); border: 1px solid var(--border);
+  background: var(--bg-soft-2); transition: border-color .2s ease, transform .2s ease;
+}
+.portfolio-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.portfolio-card h3 { font-size: 1.1rem; margin: 16px 0 8px; }
+.portfolio-card p { font-size: .92rem; color: var(--muted); margin: 0 0 16px; flex-grow: 1; }
+.portfolio-card .card-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ink); }
+.portfolio-card:hover .card-link { color: var(--accent); }
+.portfolio-card .card-link .icon { width: 16px; height: 16px; }
+
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
    Contact
    ========================================================================== */
 .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; }
