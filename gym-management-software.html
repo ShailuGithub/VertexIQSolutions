@@ -58,6 +58,30 @@
     @media (max-width: 720px) { .pain-grid { grid-template-columns: 1fr; } }
     .pain-item { display: flex; gap: 12px; align-items: flex-start; padding: 16px; border-radius: var(--radius-m); background: var(--bg-soft-2); border: 1px solid var(--border); }
     .pain-item .icon { color: #e0625a; flex-shrink: 0; margin-top: 2px; }
+
+    .service-hero-art.has-mock { display: block; padding: 20px; }
+    .service-hero-art.has-mock::after { display: none; }
+    .mock-window { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-m); }
+    .mock-titlebar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: var(--bg-soft); border-bottom: 1px solid var(--border); }
+    .mock-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .mock-title { margin-left: 8px; font-size: .8rem; color: var(--muted); font-weight: 600; }
+    .mock-body { padding: 18px; }
+    .mock-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+    @media (max-width: 480px) { .mock-stats { grid-template-columns: repeat(2, 1fr); } }
+    .mock-stat { background: var(--bg-soft-2); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+    .mock-stat b { display: block; font-size: 1.05rem; color: var(--ink); }
+    .mock-stat span { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+    .mock-stat.good b { color: #1fa15c; }
+    .mock-stat.warn b { color: #d68a1f; }
+    .mock-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .mock-table th { text-align: left; padding: 8px 10px; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); font-size: .72rem; text-transform: uppercase; letter-spacing: .03em; }
+    .mock-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--ink); }
+    .mock-table tr:last-child td { border-bottom: none; }
+    .mock-pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .72rem; font-weight: 600; }
+    .mock-pill.paid { background: rgba(39,201,63,.15); color: #1fa15c; }
+    .mock-pill.pending { background: rgba(214,138,31,.15); color: #d68a1f; }
+    .mock-pill.vacant { background: rgba(153,153,153,.18); color: #888; }
+  
   </style>
 </head>
 
@@ -137,7 +161,32 @@
     <section class="section">
       <div class="container service-layout">
         <div>
-          <div class="service-hero-art"><div class="icon-badge"><svg class="icon"><use href="#i-zap"/></svg></div></div>
+          <div class="service-hero-art has-mock">
+            <div class="mock-window">
+              <div class="mock-titlebar">
+                <span class="mock-dot" style="background:#ff5f56"></span>
+                <span class="mock-dot" style="background:#ffbd2e"></span>
+                <span class="mock-dot" style="background:#27c93f"></span>
+                <span class="mock-title">Gym Dashboard — Preview</span>
+              </div>
+              <div class="mock-body">
+                <div class="mock-stats">
+                  <div class="mock-stat"><b>186</b><span>Active Members</span></div>
+                  <div class="mock-stat warn"><b>9</b><span>Renewals Due</span></div>
+                  <div class="mock-stat good"><b>&#8377;1,86,000</b><span>Revenue (Month)</span></div>
+                  <div class="mock-stat"><b>62</b><span>Checked In Today</span></div>
+                </div>
+                <table class="mock-table">
+                  <tr><th>Member</th><th>Plan</th><th>Status</th></tr>
+                  <tr><td>Arjun Nayak</td><td>Annual</td><td><span class="mock-pill paid">Active</span></td></tr>
+                  <tr><td>Divya Kamath</td><td>Quarterly</td><td><span class="mock-pill pending">Due in 3 days</span></td></tr>
+                  <tr><td>Rohit Shetty</td><td>Monthly</td><td><span class="mock-pill paid">Active</span></td></tr>
+                  <tr><td>Meera Pai</td><td>Monthly</td><td><span class="mock-pill vacant">Expired</span></td></tr>
+                </table>
+              </div>
+            </div>
+            <p style="font-size:.75rem;color:var(--muted);margin:10px 0 0;text-align:center">Illustrative preview &mdash; actual screenshots coming soon</p>
+          </div>
 
           <p class="lead" style="font-size:1.1rem;color:var(--ink);font-weight:500">If membership renewals, attendance and payments are tracked in a register, you're finding out about lapsed members and missed payments after the fact, not before. That's revenue quietly leaking out.</p>
           <p>This software gives you a live view of every member's status, so renewals get followed up on time and nothing slips through.</p>
