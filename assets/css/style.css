@@ -833,3 +833,8 @@ h1, h2 { letter-spacing: -0.035em; }
 
 @media (prefers-reduced-motion: reduce) { .btn, .portfolio-card, .tilt-card { transition: none; } }
 .step-num { background: var(--gold-grad); color: var(--accent-ink); }
+
+@media (max-width: 520px) {
+  .hero-visual.has-3d .hv-float2 { display: none; }
+  .hero-visual.has-3d .hv-float { width: 170px; top: 0; right: 0; padding: 12px 14px; }
+}
