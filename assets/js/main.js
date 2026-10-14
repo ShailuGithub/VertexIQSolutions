@@ -15,6 +15,8 @@
   function onScroll() {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 8);
+    var hero = document.getElementById("hero");
+    header.classList.toggle("over-hero", !!hero && hero.getBoundingClientRect().bottom > header.offsetHeight);
     var top = document.getElementById("scroll-top");
     if (top) top.classList.toggle("is-visible", window.scrollY > 500);
   }

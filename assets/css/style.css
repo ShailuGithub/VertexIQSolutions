@@ -838,3 +838,11 @@ h1, h2 { letter-spacing: -0.035em; }
   .hero-visual.has-3d .hv-float2 { display: none; }
   .hero-visual.has-3d .hv-float { width: 170px; top: 0; right: 0; padding: 12px 14px; }
 }
+
+/* Light theme: keep the header dark while it sits over the always-dark hero */
+[data-theme="light"] .site-header.over-hero {
+  --header-bg: rgba(8, 8, 10, .72);
+  --ink: #f3f3f1; --ink-soft: #b6b7c2; --border: #26262d; --bg: #08080a; --bg-soft: #111114; --bg-soft-2: #18181d;
+  --accent: #e2b25c; --accent-ink: #1a1305; --line-gold: rgba(226, 178, 92, .28);
+  --gold-grad: linear-gradient(135deg, #f6dc9b 0%, #e2b25c 45%, #b9842c 100%);
+}
