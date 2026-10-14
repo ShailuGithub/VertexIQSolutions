@@ -65,6 +65,7 @@
   <!-- Icon sprite -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
+      <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></symbol>
       <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9z"/></symbol>
       <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
       <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="3,17 9,11 13,15 21,6"/><polyline points="15,6 21,6 21,12"/></symbol>
@@ -233,7 +234,7 @@
         <div class="section-title center">
           <span class="eyebrow">Services</span>
           <h2>What we build</h2>
-          <p>Six ways we help a growing business show up, sell, and scale online.</p>
+          <p>Seven ways we help a growing business show up, sell, and scale online.</p>
         </div>
       </div>
       <div class="tilt-carousel">
@@ -285,6 +286,14 @@
             <h3>UI/UX Design</h3>
             <p>Interfaces designed around how people actually use your product, not assumptions.</p>
             <a href="service-details-ui-ux-design.html" class="card-link">Learn more<svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </div>
+
+          <div class="tilt-card" data-reveal>
+            <span class="tilt-num">07</span>
+            <div class="icon-badge"><svg class="icon"><use href="#i-cube"/></svg></div>
+            <h3>3D Custom Websites</h3>
+            <p>Immersive, interactive 3D websites that make your brand impossible to ignore.</p>
+            <a href="service-details-3d-websites.html" class="card-link">Learn more<svg class="icon"><use href="#i-arrow-right"/></svg></a>
           </div>
 
         </div>
@@ -448,6 +457,7 @@
             <li><a href="service-details-graphic-design.html">Graphic Design</a></li>
             <li><a href="service-details-ecommerce-development.html">E-Commerce Development</a></li>
             <li><a href="service-details-ui-ux-design.html">UI/UX Design</a></li>
+            <li><a href="service-details-3d-websites.html">3D Custom Websites</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -471,6 +481,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="assets/js/hero3d.js"></script>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
